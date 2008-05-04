@@ -1,0 +1,14 @@
+0.5
+validVar2
+3invalidVar
+0.3.56
+0..2
+.6
+
+local oldVar = 3
+newVar = 2 + 3
+thirdVar = fourthVar = 5
+oldVar = newVar - 1
+newVar = oldVar * fourthVar
+local noAssignVar
+
