@@ -16,6 +16,11 @@
 		F250A48A0DB39FDF00F86E77 /* parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = parser.h; sourceTree = "<group>"; };
 		F250A49F0DB39FDF00F86E77 /* tokens.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tokens.h; sourceTree = "<group>"; };
 		F250A4A10DB39FDF00F86E77 /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		F2621C3D0DD5A8EF00358A14 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		F2621C3E0DD5A8EF00358A14 /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		F2621C430DD5A8EF00358A14 /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		F2621C610DD5DED900358A14 /* function.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = function.h; sourceTree = "<group>"; };
+		F2924AC10DD58B9700F074C8 /* call.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = call.cpp; sourceTree = "<group>"; };
 		F2B0AF8E0DB8DC7F00E1AC86 /* binary.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = binary.cpp; sourceTree = "<group>"; };
 		F2B0AF8F0DB8DC7F00E1AC86 /* boolean.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = boolean.cpp; sourceTree = "<group>"; };
 		F2B0AF900DB8DC7F00E1AC86 /* error.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = error.cpp; sourceTree = "<group>"; };
@@ -30,12 +35,11 @@
 		F2B0AF9B0DB8DC9400E1AC86 /* call.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = call.h; sourceTree = "<group>"; };
 		F2B0AF9E0DB8DC9400E1AC86 /* expression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expression.h; sourceTree = "<group>"; };
 		F2B0AF9F0DB8DC9400E1AC86 /* float.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = float.h; sourceTree = "<group>"; };
-		F2B0AFA00DB8DC9400E1AC86 /* function.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = function.h; sourceTree = "<group>"; };
 		F2B0AFA10DB8DC9400E1AC86 /* integer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = integer.h; sourceTree = "<group>"; };
 		F2B0AFA20DB8DC9400E1AC86 /* nil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = nil.h; sourceTree = "<group>"; };
-		F2B0AFA30DB8DC9400E1AC86 /* prototype.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = prototype.h; sourceTree = "<group>"; };
 		F2B0AFA40DB8DC9400E1AC86 /* string.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = string.h; sourceTree = "<group>"; };
 		F2B0AFA50DB8DC9400E1AC86 /* variable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = variable.h; sourceTree = "<group>"; };
+		F2D992540DD5E0A1001DE9F3 /* function.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = function.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -52,6 +56,7 @@
 		08FB7795FE84155DC02AAC07 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				F2621C370DD5A8EE00358A14 /* tools */,
 				F250A4570DB39FDF00F86E77 /* include */,
 				F250A45A0DB39FDF00F86E77 /* lib */,
 			);
@@ -118,6 +123,27 @@
 				F250A4890DB39FDF00F86E77 /* parser.cpp */,
 				F250A48A0DB39FDF00F86E77 /* parser.h */,
 				F250A49F0DB39FDF00F86E77 /* tokens.h */,
+				F2924AC10DD58B9700F074C8 /* call.cpp */,
+				F2D992540DD5E0A1001DE9F3 /* function.cpp */,
+			);
+			path = luacc;
+			sourceTree = "<group>";
+		};
+		F2621C370DD5A8EE00358A14 /* tools */ = {
+			isa = PBXGroup;
+			children = (
+				F2621C380DD5A8EE00358A14 /* luacc */,
+				F2621C430DD5A8EF00358A14 /* Makefile */,
+			);
+			name = tools;
+			path = ../tools;
+			sourceTree = SOURCE_ROOT;
+		};
+		F2621C380DD5A8EE00358A14 /* luacc */ = {
+			isa = PBXGroup;
+			children = (
+				F2621C3D0DD5A8EF00358A14 /* main.cpp */,
+				F2621C3E0DD5A8EF00358A14 /* Makefile */,
 			);
 			path = luacc;
 			sourceTree = "<group>";
@@ -134,15 +160,14 @@
 		F2B0AF980DB8DC9400E1AC86 /* expressions */ = {
 			isa = PBXGroup;
 			children = (
+				F2621C610DD5DED900358A14 /* function.h */,
 				F2B0AF990DB8DC9400E1AC86 /* binary.h */,
 				F2B0AF9A0DB8DC9400E1AC86 /* boolean.h */,
 				F2B0AF9B0DB8DC9400E1AC86 /* call.h */,
 				F2B0AF9E0DB8DC9400E1AC86 /* expression.h */,
 				F2B0AF9F0DB8DC9400E1AC86 /* float.h */,
-				F2B0AFA00DB8DC9400E1AC86 /* function.h */,
 				F2B0AFA10DB8DC9400E1AC86 /* integer.h */,
 				F2B0AFA20DB8DC9400E1AC86 /* nil.h */,
-				F2B0AFA30DB8DC9400E1AC86 /* prototype.h */,
 				F2B0AFA40DB8DC9400E1AC86 /* string.h */,
 				F2B0AFA50DB8DC9400E1AC86 /* variable.h */,
 			);
