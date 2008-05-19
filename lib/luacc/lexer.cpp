@@ -119,7 +119,7 @@ std::string Lexer::GetWord() const
             }
         }
             
-        #undef UpdateWord()
+        #undef UpdateWord
         
         ungetc(lastChar, mpStream);
     }
